@@ -1,0 +1,53 @@
+FROM node:13-alpine AS build
+
+ENV HOME=/home/app
+
+RUN npm install -g @angular/cli
+
+
+COPY package.json package-lock.json $HOME/angular/
+WORKDIR $HOME/angular
+RUN npm install --silent --progress=false
+COPY . $HOME/angular/
+
+#RUN npm ng build --prod
+RUN npm run ng build -- --deploy-url=/angular/ --prod
+
+
+#WORKDIR /app/
+#COPY package.json package-lock.json ./app
+#ADD ./package.json ./app/
+#ADD  package.json /app/
+#ADD  package-lock.json /app/
+
+#RUN npm install
+
+#WORKDIR /app/
+
+#ADD ./ ./app/
+#WORKDIR /app/
+#RUN ng build --prod
+
+#RUN ng build --prod --base-ref /angular/
+
+RUN cd $HOME
+ 
+# RUN cd /home/app/angular/dist
+# RUN cd dist
+# RUN ls
+
+FROM nginx:1.17-alpine as FINAL
+
+ADD nginx.conf /etc/nginx/
+
+
+
+
+COPY --from=build /home/app/angular/dist/docker-defenitivo-spa/ /usr/share/nginx/html
+
+# EXPOSE 4200 80
+
+# ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
+
+

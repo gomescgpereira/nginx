@@ -1,0 +1,33 @@
+networks:
+  edge:
+    driver: bridge
+services:
+  dockerdefinitivo.api:
+    build:
+      context: C:\dev\mixed
+      dockerfile: DockerDefinitivo.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: dockerdefinitivo_api
+    networks:
+      edge: {}
+    ports:
+    - target: 80
+  dockerdefinitivo.edge:
+    build:
+      context: C:\dev\mixed\DockerDefinitivo.Edge
+      dockerfile: ./Dockerfile
+    image: dockerdefinitivo_edge
+    networks:
+      edge: {}
+    ports:
+    - published: 80
+      target: 80
+  dockerdefinitivo.spa:
+    build:
+      context: C:\dev\mixed\DockerDefinitivo.Spa
+      dockerfile: ./Dockerfile
+    image: dockerdefinitivo_spa
+    networks:
+      edge: {}
+version: '3.4'

@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+  dockerdefinitivo.api:
+    image: ${DOCKER_REGISTRY-}dockerdefinitivo_api
+    build:
+      context: .
+      dockerfile: DockerDefinitivo.Api/Dockerfile
+    networks:
+      - edge
+  dockerdefinitivo.spa:
+    image: ${DOCKER_REGISTRY-}dockerdefinitivo_spa
+    build:
+      context: ./DockerDefinitivo.Spa
+      dockerfile: ./Dockerfile
+    networks:
+      - edge
+  dockerdefinitivo.edge:
+    image: ${DOCKER_REGISTRY-}dockerdefinitivo_edge
+    build:
+      context: ./DockerDefinitivo.Edge
+      dockerfile: ./Dockerfile
+    ports: 
+      - 80:80  
+    networks:
+      - edge
+      
+      
+networks:
+  edge: 
+    driver: bridge 
