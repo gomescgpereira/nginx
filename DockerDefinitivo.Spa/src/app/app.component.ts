@@ -12,7 +12,8 @@ import { Tarefa } from '../models/tarefa.model';
 })
 export class AppComponent {
   // tslint:disable-next-line:ban-types
-  public title: String = 'Minhas Tarefas';
+  public mode = 'list';
+  public title = 'Minhas Tarefas';
   public todos: Todo[] = [];
   tar = {} as Tarefa;
   public tarefas: Tarefa[] = [];
@@ -89,6 +90,10 @@ export class AppComponent {
     } else {
       this.todos = [];
     }
+  }
+
+  changeMode(mode: string) {
+    this.mode = mode;
   }
   // LoadAmpq() {
   //   const connection =  Amqp.connection('amqp://localhost');

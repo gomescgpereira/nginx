@@ -1,0 +1,76 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    background: #050553;
+    background: -moz-linear-gradient(60deg, #050553 0%, #c86dd7 100%);
+    background: -webkit-linear-gradient(60deg, #050553 0%, #c86dd7 100%);
+    background: linear-gradient(60deg, #050553 0%, #c86dd7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(starcolor='#3023ae', endColorstr='#c86dd7', GradientType=1);
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 4px 14px 0px rgba(0,0,0,0.39); 
+    -moz-box-shadow: 3px 4px 14px 0px rgba(0,0,0,0,39);
+    box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39)
+  }
+
+ 
+li {
+    padding: 15px;
+    margin: 10px;
+    font-size: 1em;
+    font-style: italic;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+li>button {
+    border: none;
+    background-color: #fff;
+    font-size: 1em;
+    float: right;
+    opacity: 0.6;
+    transition: opacity 1s;
+}
+
+li>button:hover {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: 5em;
+    text-shadow: 3px 5px #000;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button {
+    background-color: #000;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius:  15px;
+    font-size: 1em;
+    font-weight: 300;
+    padding-left: 25px;
+    padding-right: 25px;
+}

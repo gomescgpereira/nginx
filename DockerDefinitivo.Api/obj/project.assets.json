@@ -7501,11 +7501,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\mixed\\DockerDefinitivo.Api\\DockerDefinitivo.Api.csproj",
+      "projectUniqueName": "C:\\dev\\nginx\\DockerDefinitivo.Api\\DockerDefinitivo.Api.csproj",
       "projectName": "DockerDefinitivo.Api",
-      "projectPath": "C:\\dev\\mixed\\DockerDefinitivo.Api\\DockerDefinitivo.Api.csproj",
+      "projectPath": "C:\\dev\\nginx\\DockerDefinitivo.Api\\DockerDefinitivo.Api.csproj",
       "packagesPath": "C:\\Users\\host\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\mixed\\DockerDefinitivo.Api\\obj\\",
+      "outputPath": "C:\\dev\\nginx\\DockerDefinitivo.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
