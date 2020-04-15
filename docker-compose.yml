@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: DockerDefinitivo.Api/Dockerfile
     networks:
-      - 
+      - edge 
 
   dockerdefinitivo.spa:
     image: ${DOCKER_REGISTRY-}dockerdefinitivo_spa
