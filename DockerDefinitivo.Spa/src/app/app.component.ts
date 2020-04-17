@@ -81,6 +81,7 @@ export class AppComponent {
   salve(){
     const data = JSON.stringify(this.todos);
     localStorage.setItem('todos', data);
+    this.mode = 'list';
   }
 
   load(){
